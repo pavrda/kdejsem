@@ -14,7 +14,15 @@
     //
     function onDeviceReady() {
 //        navigator.geolocation.getCurrentPosition(onSuccess, onError,{frequency:5000,maximumAge: 0, timeout: 10000, enableHighAccuracy:false});
-        
+
+		alert('jdu to zjisit');
+        if (navigator.geolocation) {
+//    	  navigator.geolocation.getCurrentPosition(onSuccess, onError);
+  	  navigator.geolocation.getCurrentPosition(onSuccess, onError,{frequency:5000,maximumAge: 0, timeout: 10000, enableHighAccuracy:false});
+    	} else {
+    	  error('not supported');
+    	}
+
         
     }
 
@@ -40,18 +48,12 @@
     }
 
     
-    if (navigator.geolocation) {
-//  	  navigator.geolocation.getCurrentPosition(onSuccess, onError);
-	  navigator.geolocation.getCurrentPosition(onSuccess, onError,{frequency:5000,maximumAge: 0, timeout: 10000, enableHighAccuracy:false});
-  	} else {
-  	  error('not supported');
-  	}
     
     
     
     </script>
   </head>
   <body>
-    <p id="geolocation">Finding geolocation 123...</p>
+    <p id="geolocation">Finding geolocation 1234 ...</p>
   </body>
 </html>
