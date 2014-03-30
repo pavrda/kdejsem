@@ -13,7 +13,9 @@
     // device APIs are available
     //
     function onDeviceReady() {
-        navigator.geolocation.getCurrentPosition(onSuccess, onError,{frequency:5000,maximumAge: 0, timeout: 100, enableHighAccuracy:false});
+//        navigator.geolocation.getCurrentPosition(onSuccess, onError,{frequency:5000,maximumAge: 0, timeout: 10000, enableHighAccuracy:false});
+        
+        
     }
 
     // onSuccess Geolocation
@@ -37,9 +39,19 @@
               'message: ' + error.message + '\n');
     }
 
+    
+    if (navigator.geolocation) {
+//  	  navigator.geolocation.getCurrentPosition(onSuccess, onError);
+	  navigator.geolocation.getCurrentPosition(onSuccess, onError,{frequency:5000,maximumAge: 0, timeout: 10000, enableHighAccuracy:false});
+  	} else {
+  	  error('not supported');
+  	}
+    
+    
+    
     </script>
   </head>
   <body>
-    <p id="geolocation">Finding geolocation...</p>
+    <p id="geolocation">Finding geolocation 123...</p>
   </body>
 </html>
