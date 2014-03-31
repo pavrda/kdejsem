@@ -18,7 +18,7 @@
 		alert('jdu to zjisit');
         if (navigator.geolocation) {
 //    	  navigator.geolocation.getCurrentPosition(onSuccess, onError);
-  	  navigator.geolocation.getCurrentPosition(onSuccess, onError,{frequency:5000,maximumAge: 0, timeout: 10000, enableHighAccuracy:false});
+  	  		navigator.geolocation.getCurrentPosition(onSuccess, onError,{frequency:5000,maximumAge: 0, timeout: 10000, enableHighAccuracy:true});
     	} else {
     	  error('not supported');
     	}
@@ -54,6 +54,6 @@
     </script>
   </head>
   <body>
-    <p id="geolocation">Finding geolocation 1234 ...</p>
+    <p id="geolocation">Finding geolocation 3.3 ...</p>
   </body>
 </html>
